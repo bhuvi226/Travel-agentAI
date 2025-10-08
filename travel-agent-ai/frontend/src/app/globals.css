@@ -1,0 +1,4 @@
+/* Minimal global styles; extend with your design system */
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+html, body, #__next { height: 100%; margin: 0; padding: 0; }
