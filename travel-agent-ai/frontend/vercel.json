@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "framework": "nextjs",
+  "buildCommand": "npm ci && npm run build",
+  "installCommand": "npm ci",
+  "outputDirectory": ".next",
+  "env": {
+    "NEXT_PUBLIC_API_BASE_URL": "https://travel-agentai-backend.onrender.com"
+  }
+}

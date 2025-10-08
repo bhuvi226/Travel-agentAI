@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: travel-agentai-backend
+    env: docker
+    plan: free
+    previewPlan: free
+    autoDeploy: true
+    region: oregon
+    dockerfilePath: travel-agent-ai/backend/Dockerfile
+    envVars:
+      - key: ENV
+        value: production
+      - key: PORT
+        value: 8000
+    healthCheckPath: /docs
+
+staticSites:
+  - name: travel-agentai-frontend
+    publishPath: travel-agent-ai/frontend/out
+    buildCommand: npm ci && npm run build
+    rootDir: travel-agent-ai/frontend
+    envVars:
+      - key: NEXT_PUBLIC_API_BASE_URL
+        value: https://travel-agentai-backend.onrender.com
