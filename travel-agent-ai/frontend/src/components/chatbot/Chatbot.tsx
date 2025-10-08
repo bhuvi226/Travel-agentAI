@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { FiMessageSquare, FiX, FiSend, FiUser, FiBot } from 'react-icons/fi';
+import { FiMessageSquare, FiX, FiSend, FiUser, FiMessageSquare } from 'react-icons/fi';
 
 type Message = {
   id: string;
@@ -120,7 +120,7 @@ export function Chatbot() {
                   <FiUser className="h-5 w-5 text-indigo-600" />
                 ) : (
                   <div className="h-5 w-5 rounded-full bg-indigo-600 flex items-center justify-center">
-                    <FiBot className="h-3 w-3 text-white" />
+                    <FiMessageSquare className="h-3 w-3 text-white" />
                   </div>
                 )}
               </div>
